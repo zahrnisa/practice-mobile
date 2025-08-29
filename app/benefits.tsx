@@ -1,9 +1,8 @@
 import { Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 
-export default function Index() {
+export default function Benefits() {
   return (
-    <ScrollView
-      style={{
+    <ScrollView style={{
         flex: 1,
         backgroundColor: "#EFEFEF",
       }}
@@ -72,7 +71,7 @@ export default function Index() {
       </View>
       <View style={styles.card}>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
-          <Image source={require("../assets/images/image2.jpg")}
+          <Image source={require("../assets/images/chevrolet.jpg")}
             style={{ width: 50, height: 50, marginRight: 12 }}
           />
           <Text style={{
@@ -83,7 +82,6 @@ export default function Index() {
           >Super Chevrolet Service</Text>
         </View>
       </View>
-      <Text>Edit app/index.tsx to edit this screen.</Text>
     </ScrollView>
   );
 }
