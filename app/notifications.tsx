@@ -1,4 +1,6 @@
-import { View, Text, StyleSheet, FlatList, ListRenderItem, Image } from "react-native";
+import { useNavigation } from "expo-router";
+import { useLayoutEffect } from "react";
+import { View, Text, StyleSheet, FlatList, ListRenderItem, Image, TouchableOpacity, Alert } from "react-native";
 
 type Notification = {
   id: string;
@@ -16,6 +18,19 @@ const notifications: Notification[] = [
 ];
 
 export default function NotificationScreen() {
+   const navigation = useNavigation();
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <TouchableOpacity onPress={() => Alert.alert("Clear clicked!")}>
+          <Text style={styles.clearText}>Clear</Text>
+        </TouchableOpacity>
+      ),
+      title: "Notifications",
+    });
+  }, [navigation]);
+
   const renderItem: ListRenderItem<Notification> = ({ item }) => (
     <View style={styles.card}>
       <View style={styles.iconWrapper}>
@@ -67,7 +82,7 @@ const styles = StyleSheet.create({
   icon: {
     width: 42,
     height: 42,
-    borderRadius: 16,
+    borderRadius: 15,
     borderColor: "white",
   },
   title: {
@@ -94,5 +109,14 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     backgroundColor: "red",
     marginTop: 4,
+  },
+  clearText: {
+    marginRight: 16,
+    fontSize: 14,
+    fontWeight: "bold",
+    backgroundColor: "white",
+    color: "navy",
+    borderRadius: 16,
+    padding: 10,
   },
 });
