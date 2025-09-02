@@ -14,7 +14,7 @@ export function CustomBackButton() {
 
 const styles = StyleSheet.create({
   backButton: {
-    marginLeft: 16,
+    marginLeft: 5,
     width: 45,
     height: 36,
     borderRadius: 15,

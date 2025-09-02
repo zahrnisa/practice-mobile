@@ -17,6 +17,7 @@ export default function RootLayout() {
       <Stack.Screen name="my-voucher" options={{ title: "My Voucher" }} />
       <Stack.Screen name="notifications" options={{ title: "Notifications" }} />
       <Stack.Screen name="benefits" options={{ title: "Super Chevrolet Service" }} />
+      <Stack.Screen name="profile-edit" options={{ title: "Edit Profile" }} />
     </Stack>
   );
 }
