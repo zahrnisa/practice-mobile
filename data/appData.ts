@@ -74,4 +74,49 @@ export const appData = {
       type: "expense",
     },
   ],
+
+  promotions: [
+    {
+      id: 1,
+      image: require("../assets/images/image1.png"),
+      title: "Super Car Wash Company",
+      description: "10 wash for $30!",
+      buttonText: "Buy now",
+    },
+    {
+      id: 2,
+      image: require("../assets/images/orozocos.png"),
+      title: "Praxedis Group",
+      description: "20% disc in discount",
+      buttonText: "View info",
+    },
+    {
+      id: 3,
+      image: require("../assets/images/orozocos.png"),
+      title: "Tag Line Here!",
+      description: "Free service check",
+      buttonText: "Get Coupon!",
+    },
+    {
+      id: 4,
+      image: require("../assets/images/image1.png"),
+      title: "Tag Line Here!",
+      description: "Free service check",
+      buttonText: "Get Coupon!",
+    },
+    {
+      id: 5,
+      image: require("../assets/images/orozocos.png"),
+      title: "Chevrolet Service",
+      description: "Free service check",
+      buttonText: "Get Coupon!",
+    },
+    {
+      id: 6,
+      image: require("../assets/images/image1.png"),
+      title: "AutoService",
+      description: "Free service check",
+      buttonText: "Get Coupon!",
+    },
+  ],
 };

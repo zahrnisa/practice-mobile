@@ -38,7 +38,7 @@ export default function TabsLayout() {
             <View style={{
               borderWidth: 2,
               borderColor: color,
-              borderRadius: 10,
+              borderRadius: 5,
               padding: 0,
               alignItems: 'center',
               justifyContent: 'center',

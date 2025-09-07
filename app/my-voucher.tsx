@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { appData } from "../data/appData";
+import { useRouter } from "expo-router";
 
 export default function Vouchers() {
+  const router = useRouter();
+
   const [activeTab, setActiveTab] = useState<"active" | "past">("active");
   const vouchers = activeTab === "active" ? appData.vouchers.active : appData.vouchers.past;
     return(
@@ -18,7 +21,14 @@ export default function Vouchers() {
         <ScrollView contentContainerStyle={{ padding: 16 }}>
           {activeTab === "active"
             ? appData.vouchers.active.map((v) => (
-                <Pressable key={v.id} style={styles.card} onPress={() => alert(v.title)}>
+                <Pressable key={v.id} style={styles.card} onPress={() => {
+                  if (v.merchant === "Efficient Towing") {
+                    router.push("/efficient-towing");
+                  } else {
+                    alert(v.title);
+                  }
+                }}
+                >
                   <Image source={v.logo} style={styles.logo} resizeMode="contain"/>
                   <View style={{ flex: 1 }}>
                     <Text style={styles.merchant}>{v.merchant}</Text>

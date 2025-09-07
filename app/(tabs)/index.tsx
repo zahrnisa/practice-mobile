@@ -82,7 +82,9 @@ export default function Home() {
       {/* Benefits & Promotions */}
       <View style={styles.titleLinkComponents}>
         <Text style={styles.titleText}>Benefits & Promotions</Text>
-        <Text style={styles.textLink}>View all</Text>
+        <Pressable onPress={() => router.push("/benefit-promotion")}>
+          <Text style={styles.textLink}>View All</Text>
+        </Pressable>
       </View>
 
       <View style={styles.promoGrid}>
